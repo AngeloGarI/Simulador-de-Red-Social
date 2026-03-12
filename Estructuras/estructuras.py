@@ -55,6 +55,10 @@ class Node:
     #Lista enlazada simple
 
 class LinkedListSimple:
+    """
+    Lista enlazada simple para almacenar todas las publicaciones.
+    Uso: Almacenamiento principal y búsqueda de palabras clave.
+    """
     def __init__(self):
         self.head = None
         self.tail = None
@@ -115,7 +119,8 @@ class LinkedListSimple:
         return results
 
     def get_by_index(self, index):
-
+        if not isinstance(index, int):
+            raise TypeError("El índice debe de ser un entero")
         if index < 0 or index >= self.size:
             return None
 
@@ -182,6 +187,9 @@ class LinkedListSimple:
         self.size += 1
         return True
 
+    def get_first(self):
+        return self.head.data if self.head else None
+
     #Nodo doble
 
 class NodeDoubly:
@@ -193,6 +201,10 @@ class NodeDoubly:
     #Lista Doblemente Enlazada
 
 class LinkedListDoubly:
+    """
+    Lista doblemente enlazada para navegación bidireccional.
+    Uso: Botones "Siguiente" y "Anterior".
+    """
     def __init__(self):
         self.head = None
         self.tail = None
@@ -265,8 +277,18 @@ class LinkedListDoubly:
 
         return result
 
+    def get_first(self):
+        return self.head.data if self.head else None
+
+    def is_empty(self):
+        return self.size == 0
+
     #Lista Circular
 class LinkedListCircular:
+    """
+    Lista circular para scroll infinito.
+    Uso: Al llegar al final, vuelve al inicio automáticamente.
+    """
     def __init__(self):
         self.head = None
         self.tail = None
@@ -334,3 +356,9 @@ class LinkedListCircular:
                 break
 
         return result
+
+    def get_first(self):
+        return self.head.data if self.head else None
+
+    def is_empty(self):
+        return self.size == 0
