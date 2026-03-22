@@ -17,8 +17,10 @@ class Post:
         self.content = content
         self.timestamp = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
         self.likes = 0
+        self.dislikes = 0
         self.comments = []
         self.is_favorite = False
+        self.imagen = ""
 
     def to_dict(self)->dict:
         return {
@@ -27,8 +29,10 @@ class Post:
             "content": self.content,
             "timestamp": self.timestamp,
             "likes": self.likes,
+            "dislikes": self.dislikes,
             "comments": self.comments,
-            "is_favorite": self.is_favorite
+            "is_favorite": self.is_favorite,
+            "imagen": self.imagen
         }
     @staticmethod
     def from_dict(data: dict):
@@ -38,8 +42,10 @@ class Post:
             Post._id_counter = data["id"] + 1
         post.timestamp = data["timestamp"]
         post.likes = data["likes"]
+        post.dislikes = data.get("dislikes", 0)
         post.comments = data["comments"]
         post.is_favorite = data["is_favorite"]
+        post.imagen = data.get("imagen", "")
         return post
 
     def __str__(self):
