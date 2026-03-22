@@ -1,0 +1,61 @@
+{
+    "usuarios": [
+        {
+            "username": "admin",
+            "password": "1234",
+            "nombre": "Administrador",
+            "bio": "Cuenta de administrador",
+            "foto": "",
+            "amigos": [
+                "juan"
+            ],
+            "solicitudes_enviadas": [],
+            "solicitudes_recibidas": [],
+            "guardados": [
+                3
+            ],
+            "configuracion": {
+                "mostrar_en_linea": true,
+                "mensajes_desconocidos": true,
+                "tema": "claro"
+            }
+        },
+        {
+            "username": "juan",
+            "password": "123",
+            "nombre": "Juan Pérez",
+            "bio": "Hola soy Juan",
+            "foto": "",
+            "amigos": [
+                "admin",
+                "angelo"
+            ],
+            "solicitudes_enviadas": [],
+            "solicitudes_recibidas": [],
+            "guardados": [],
+            "configuracion": {
+                "mostrar_en_linea": true,
+                "mensajes_desconocidos": true,
+                "tema": "claro"
+            }
+        },
+        {
+            "username": "angelo",
+            "password": "111",
+            "nombre": "angelo",
+            "bio": "El mas grande JAJA",
+            "foto": "A:/583690674_1403526584628624_3404736992019560212_n.jpg",
+            "amigos": [
+                "juan"
+            ],
+            "solicitudes_enviadas": [],
+            "solicitudes_recibidas": [],
+            "guardados": [],
+            "configuracion": {
+                "mostrar_en_linea": true,
+                "mensajes_desconocidos": true,
+                "tema": "claro"
+            }
+        }
+    ]
+}
