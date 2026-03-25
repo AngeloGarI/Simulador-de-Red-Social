@@ -1,0 +1,16 @@
+{
+    "posts": [
+        {
+            "id": 2,
+            "author": "juan",
+            "content": "Post de prueba 2",
+            "timestamp": "21/03/2026 19:42:03",
+            "likes": 4,
+            "dislikes": 2,
+            "comments": [
+                "angelo: Bien!"
+            ],
+            "is_favorite": false
+        }
+    ]
+}
